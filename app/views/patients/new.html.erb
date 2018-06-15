@@ -1,0 +1,13 @@
+
+
+<div style="text-align:center">
+  <h1>Register New Patient</h1>
+  <%= form_for @patient do |f| %>
+  <p><%= f.label :name, "Name: "%>
+    <%= f.text_field :name %></p>
+  <p><%= f.label :age, "Age: "%>
+    <%= f.number_field :age %></p>
+  <p><%= f.submit "Create Patient" %></p>
+  <% end %>
+
+</div>

@@ -1,0 +1,18 @@
+<div style="text-align:center">
+  <p><h2><%= link_to "Edit Patient", edit_patient_path(@patient) %></h2></p>
+  <p>Patient: <%=  @patient.name %></p>
+  <p>Patient's Age: <%=  @patient.age %></p>
+
+  <ul>
+    <% @patient.appointments.each do |appointment| %>
+      <%= "#{appointment.appointment_datetime}" + " - Doctor: "%>
+      <%= link_to "#{appointment.doctor.name}", doctor_path(appointment.doctor) %>
+    <% end %>
+
+  </ul>
+
+
+
+
+
+</div>
